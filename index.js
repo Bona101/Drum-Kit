@@ -14,48 +14,46 @@ document.addEventListener("keypress", (event) => {
 })
 
 const sound = (key) => {
+    let audio;
     switch (key){
         case "w":
-            let audioW = new Audio("./sounds/tom-1.mp3");
-            audioW.play();
+            audio = new Audio("./sounds/tom-1.mp3");
             break;
 
         case "a":
-            let audioA = new Audio("./sounds/tom-2.mp3");
-            audioA.play();
+            audio = new Audio("./sounds/tom-2.mp3");
             break;
 
         case "s":
-            let audioS = new Audio("./sounds/tom-3.mp3");
-            audioS.play();
+            audio = new Audio("./sounds/tom-3.mp3");
             break;
 
         case "d":
-            let audioD = new Audio("./sounds/tom-4.mp3");
-            audioD.play();
+            audio = new Audio("./sounds/tom-4.mp3");
             break;
             
         case "j":
-            let audioJ = new Audio("./sounds/snare.mp3");
-            audioJ.play();
+            audio = new Audio("./sounds/snare.mp3");
             break;
 
         case "k":
-            let audioK = new Audio("./sounds/crash.mp3");
-            audioK.play();
+            audio = new Audio("./sounds/crash.mp3");
             break;
 
         case "l":
-            let audioL = new Audio("./sounds/kick-bass.mp3");
-            audioL.play();
+            audio = new Audio("./sounds/kick-bass.mp3");
             break;
+
+        default:
+            alert("No instrument attached!");
     }
+    audio.play();
 }
 
 const styling = (button) => {
     button.classList.add("styling");
     setTimeout(() => {
         button.classList.remove("styling");   
-    }, 300);
+    }, 200);
 }
 
